@@ -57,6 +57,18 @@ try
         Sales = 500000,
         CommissionPercentaje = 0.1F
     };
+
+    HourlyEmployee hourlyEmployee = new HourlyEmployee() 
+    {
+        Id = 1234,
+        FirstName = firstName,
+        LastName = lastName,
+        Birthdate = dateObject,
+        HiringDate = dateObject,
+        IsActive = true,
+        Hours = 3,
+        HoursValue = 8500
+    };
     
     Console.WriteLine(salaryEmployee);
 }
