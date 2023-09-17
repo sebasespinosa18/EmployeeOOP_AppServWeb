@@ -45,6 +45,18 @@ try
         Salary = salary,
     
     };
+
+    CommissionEmployee commissionEmployee = new CommissionEmployee()
+    {
+        Id = 1234,
+        FirstName = firstName,
+        LastName = lastName,
+        Birthdate = dateObject,
+        HiringDate = dateObject,
+        IsActive = true,
+        Sales = 500000,
+        CommissionPercentaje = 0.1F
+    };
     
     Console.WriteLine(salaryEmployee);
 }
