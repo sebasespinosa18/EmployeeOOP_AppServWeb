@@ -6,32 +6,30 @@ using System.Threading.Tasks;
 
 namespace EmployeeOOP.Classes
 {
-    public class HourlyEmployee : Employee
+    public class BaseCommissionEmployee : CommissionEmployee
     {
         #region Properties
-        public float Hours { get; set; }
+        public decimal Base { get; set; }
 
-        public decimal HoursValue { get; set; }
         #endregion
 
         #region Methods
-        public HourlyEmployee()
+        public BaseCommissionEmployee()
         {
             
         }
 
         public override decimal GetValueToPay()
         {
-            return (decimal)Hours * HoursValue;
+            return base.GetValueToPay() + Base;
         }
 
         public override string ToString()
         {
             return $"{base.ToString()}" +
-                $"Horas:  {Hours:P2}\n\t" +
-                $"Valor Horas:  {HoursValue:C2}\n\t" +
-                $"Valor a pagar:  {GetValueToPay():C2}\n\t";
+                $"Base:  {Base:C2}\n\t";
         }
         #endregion
+
     }
 }

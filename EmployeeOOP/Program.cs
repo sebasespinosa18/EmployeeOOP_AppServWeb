@@ -69,8 +69,22 @@ try
         Hours = 3,
         HoursValue = 8500
     };
-    
+
+    BaseCommissionEmployee baseCommissionEmployee = new BaseCommissionEmployee()
+    {
+        Id = 1234,
+        FirstName = firstName,
+        LastName = lastName,
+        Birthdate = dateObject,
+        HiringDate = dateObject,
+        IsActive = true,
+        Base = 25555
+    };
     Console.WriteLine(salaryEmployee);
+    Console.WriteLine(commissionEmployee);
+    Console.WriteLine(hourlyEmployee);
+    Console.WriteLine(baseCommissionEmployee);
+
 }
 catch (Exception ex)
 {
